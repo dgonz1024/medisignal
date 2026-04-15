@@ -11,6 +11,31 @@ Today, the project does four real things:
 
 The current product direction is moving toward a tool that helps research teams, clinics, and health-tech companies explore patterns across trials, sponsors, phases, conditions, and early termination behavior.
 
+## MediSignal Console
+
+The system dashboard provides a quick operational overview of the ingested clinical trial dataset, including key metrics such as trial 
+volume, top conditions, and sponsor distribution.
+
+<img width="1425" height="681" alt="ConsoleScreen" src="https://github.com/user-attachments/assets/2d88aaff-5d81-41b3-8a08-1bf9819121c1" />
+
+## Trial Explorer
+
+The Explorer allows users to filter and inspect trials using structured fields such as phase, sponsor, condition, and enrollment size. Selecting a trial surfaces normalized study details extracted from the ClinicalTrials.gov dataset.
+
+<img width="978" height="684" alt="Explorer" src="https://github.com/user-attachments/assets/5636401a-c2e0-4df2-839a-e8d9a8987df3" />
+
+## Research Briefs
+
+Aggregated analytics summarize sponsor and condition activity across the dataset, highlighting completion rates, enrollment patterns, and sponsor mix.
+
+<img width="1422" height="680" alt="Drill Down" src="https://github.com/user-attachments/assets/fe94608d-44bf-4ad5-991d-fa5c0fbb7fe8" />
+
+## Pattern Watch
+
+The Pattern Watch dashboard surfaces higher-level signals such as early termination patterns and underrepresented research areas.
+
+<img width="1381" height="630" alt="Pattern Watch" src="https://github.com/user-attachments/assets/54545079-8b23-4478-bc3a-c9f3b4c6b672" />
+
 ## What The Program Does Right Now
 
 MediSignal currently supports:

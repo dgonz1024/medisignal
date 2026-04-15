@@ -9,8 +9,7 @@ Today, the project does four real things:
 - normalizes records into structured tables for querying and analytics
 - exposes the data through a FastAPI API and a browser-based research dashboard
 
-The current product direction is not "another trial browser."  
-It is moving toward a tool that helps research teams, clinics, and health-tech companies explore patterns across trials, sponsors, phases, conditions, and early termination behavior.
+The current product direction is moving toward a tool that helps research teams, clinics, and health-tech companies explore patterns across trials, sponsors, phases, conditions, and early termination behavior.
 
 ## What The Program Does Right Now
 
@@ -228,7 +227,7 @@ medisignal/
 
 ## Important Limitations
 
-This README is intentionally based on what the program actually does today, so here are the main limitations honestly:
+This README is intentionally based on what the program actually does today, so here are the main limitations:
 
 - the dataset is only as broad as what has been ingested locally
 - analytics are descriptive, not scientific conclusions
@@ -238,19 +237,9 @@ This README is intentionally based on what the program actually does today, so h
 - data quality checks exist, but they are still relatively lightweight
 - this is not a medical advice product
 
-## Current Value Of The Project
+## Future Plans For The Project
 
-MediSignal already demonstrates:
-
-- backend service design
-- data ingestion and ETL architecture
-- reproducible raw data preservation
-- relational schema design across pipeline stages
-- analytics-oriented API design
-- interactive drill-down exploration on top of structured clinical trial data
-
-The next major step for the project is not just more polish.  
-It is making the product more clearly useful for real users by improving:
+The next major step for the project is making the product more clearly useful for real users by improving:
 
 - condition intelligence
 - sponsor benchmarking

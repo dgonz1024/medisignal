@@ -13,6 +13,8 @@ services:
     dockerContext: .
     healthCheckPath: /health
     envVars:
+      - key: PYTHONPATH
+        value: /app
       - key: MEDISIGNAL_ENV
         value: production
       - key: MEDISIGNAL_LOG_LEVEL
@@ -33,6 +35,8 @@ services:
     schedule: "0 */6 * * *"
     dockerCommand: "python scripts/run_ingestion.py --max-pages 20 --page-size 100"
     envVars:
+      - key: PYTHONPATH
+        value: /app
       - key: MEDISIGNAL_ENV
         value: production
       - key: MEDISIGNAL_LOG_LEVEL
@@ -53,6 +57,8 @@ services:
     schedule: "30 */6 * * *"
     dockerCommand: "python scripts/run_pipeline.py"
     envVars:
+      - key: PYTHONPATH
+        value: /app
       - key: MEDISIGNAL_ENV
         value: production
       - key: MEDISIGNAL_LOG_LEVEL

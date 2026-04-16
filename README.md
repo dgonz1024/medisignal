@@ -1,7 +1,6 @@
 # MediSignal
 
-MediSignal is a clinical trial intelligence prototype built on top of public ClinicalTrials.gov data.
-
+MediSignal is a clinical trial analytics platform that ingests public study records from the ClinicalTrials.gov API, processes them through a multi-stage ETL pipeline, and surfaces structured insights through a FastAPI service and research dashboard.
 Today, the project does four real things:
 
 - ingests live study records from the ClinicalTrials.gov API

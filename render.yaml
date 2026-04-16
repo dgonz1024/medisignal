@@ -33,7 +33,7 @@ services:
     dockerfilePath: ./Dockerfile
     dockerContext: .
     schedule: "0 */6 * * *"
-    dockerCommand: "python scripts/run_ingestion.py --max-pages 20 --page-size 100"
+    dockerCommand: "python scripts/run_ingestion.py --max-pages 120 --page-size 100"
     envVars:
       - key: PYTHONPATH
         value: /app

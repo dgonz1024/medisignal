@@ -16,31 +16,31 @@ The current product direction is moving toward a tool that helps research teams,
 The system dashboard provides a quick operational overview of the ingested clinical trial dataset, including key metrics such as trial 
 volume, top conditions, and sponsor distribution.
 
-<img width="1425" height="681" alt="ConsoleScreen" src="https://github.com/user-attachments/assets/2d88aaff-5d81-41b3-8a08-1bf9819121c1" />
+<img width="1104" height="628" alt="Screenshot 2026-04-16 at 10 08 24 AM" src="https://github.com/user-attachments/assets/291bc391-b2cd-477c-ae4c-fb2707b832ab" />
 
 ## Trial Explorer
 
 The Explorer allows users to filter and inspect trials using structured fields such as phase, sponsor, condition, and enrollment size. Selecting a trial surfaces normalized study details extracted from the ClinicalTrials.gov dataset.
 
-<img width="978" height="684" alt="Explorer" src="https://github.com/user-attachments/assets/5636401a-c2e0-4df2-839a-e8d9a8987df3" />
+<img width="1151" height="686" alt="Screenshot 2026-04-16 at 10 10 23 AM" src="https://github.com/user-attachments/assets/4e4c6c82-4617-47ca-baa3-289a981e9e13" />
 
 ## Research Briefs
 
 Aggregated analytics summarize sponsor and condition activity across the dataset, highlighting completion rates, enrollment patterns, and sponsor mix.
 
-<img width="1422" height="680" alt="Drill Down" src="https://github.com/user-attachments/assets/fe94608d-44bf-4ad5-991d-fa5c0fbb7fe8" />
+<img width="1099" height="685" alt="Screenshot 2026-04-16 at 10 11 46 AM" src="https://github.com/user-attachments/assets/635f0450-0e2f-4bd2-909b-04341ea2dcf7" />
 
 ## Pattern Watch
 
 The Pattern Watch dashboard surfaces higher-level signals such as early termination patterns and underrepresented research areas.
 
-<img width="1381" height="630" alt="Pattern Watch" src="https://github.com/user-attachments/assets/54545079-8b23-4478-bc3a-c9f3b4c6b672" />
+<img width="1094" height="567" alt="Screenshot 2026-04-16 at 10 12 07 AM" src="https://github.com/user-attachments/assets/c4870d65-319e-45a7-bd65-18729a5e5cf4" />
 
 ## What The Program Does Right Now
 
 MediSignal currently supports:
 
-- live ingestion from ClinicalTrials.gov v2
+- live ingestion of 10,000+ clinical trials from ClinicalTrials.gov v2
 - multi-page ingestion for larger local datasets
 - raw, staging, and analytics schemas in PostgreSQL
 - ETL normalization from nested API JSON into relational tables

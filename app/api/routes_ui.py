@@ -810,7 +810,7 @@ HTML_PAGE = """
 
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-label">Trials Loaded</div>
+          <div class="stat-label">Trials Indexed</div>
           <div class="stat-value" id="stat-total">--</div>
         </div>
         <div class="stat-card">

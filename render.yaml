@@ -1,0 +1,65 @@
+databases:
+  - name: medisignal-db
+    databaseName: medisignal
+    user: medisignal
+    plan: free
+
+services:
+  - type: web
+    name: medisignal-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: MEDISIGNAL_ENV
+        value: production
+      - key: MEDISIGNAL_LOG_LEVEL
+        value: INFO
+      - key: MEDISIGNAL_CLINICAL_TRIALS_BASE_URL
+        value: https://clinicaltrials.gov/api/v2/studies
+      - key: MEDISIGNAL_DATABASE_URL
+        fromDatabase:
+          name: medisignal-db
+          property: connectionString
+
+  - type: cron
+    name: medisignal-ingestion
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    schedule: "0 */6 * * *"
+    dockerCommand: "python scripts/run_ingestion.py --max-pages 20 --page-size 100"
+    envVars:
+      - key: MEDISIGNAL_ENV
+        value: production
+      - key: MEDISIGNAL_LOG_LEVEL
+        value: INFO
+      - key: MEDISIGNAL_CLINICAL_TRIALS_BASE_URL
+        value: https://clinicaltrials.gov/api/v2/studies
+      - key: MEDISIGNAL_DATABASE_URL
+        fromDatabase:
+          name: medisignal-db
+          property: connectionString
+
+  - type: cron
+    name: medisignal-pipeline
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    schedule: "30 */6 * * *"
+    dockerCommand: "python scripts/run_pipeline.py"
+    envVars:
+      - key: MEDISIGNAL_ENV
+        value: production
+      - key: MEDISIGNAL_LOG_LEVEL
+        value: INFO
+      - key: MEDISIGNAL_CLINICAL_TRIALS_BASE_URL
+        value: https://clinicaltrials.gov/api/v2/studies
+      - key: MEDISIGNAL_DATABASE_URL
+        fromDatabase:
+          name: medisignal-db
+          property: connectionString
